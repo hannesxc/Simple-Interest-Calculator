@@ -1,37 +1,72 @@
-body 
-{
-    background-color: black;
+body {
+    background-color: lightsteelblue;
 }
 
-h1
-{
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 0.6;
+}
+
+.navitems {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+h1 {
     text-align: center;
     font-family: sans-serif;
     color: rgb(178, 190, 181);
 }
 
-.maindiv
-{
+.maindiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column  ;
+    height: calc(100vh - 90px);
+}
+
+.secdiv {
     margin: auto;
-    padding:20px;
-    border-radius:25px;
+    padding: 10px;
+    border-radius: 20px;
     width: 500px;
-    background-color: whitesmoke;
+    height: 400px;
+    background-color: #e4e4e4;
 }
 
-.secdiv
-{
-    /* How the hell do you center a div within a centered div???? */
-    color: black;
-}
-
-label
-{
+label {
     display: inline-block;
     width: 150px;
 }
 
-#result_style 
-{
+#result_style {
     padding: 20px;
+}
+
+.display-box {
+    background-color: #dcdbe1;
+    border-radius: 5px;
+    width: 97%;
+    height: 75%;
+}
+
+input[type=button] {
+    background-color:  #e3e4c3;
+    color: black;
+    width: 100%;
+    border-radius: 7px;
+    height: 85%;
+    outline: none;
+}
+
+input[value] {
+    font-size: 16px;
 }
