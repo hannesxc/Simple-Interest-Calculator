@@ -1,48 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title> Web App - Simple Interest Calculator </title> 
-        <script src="script.js">
-        </script>
+        <title>Simple Interest Calculator</title> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/svg+xml" href="./favicon.svg">
     </head>
     <body>
+        <header class="header">
+            <ul class="navitems">
+                <li class="item"><a href="./index.html">Basic Calculator</a></li>
+                <li class="item"><a href="./si-calculator.html">SI Calculator</a></li>
+                <li class="item"><a href="./ci-calculator.html">CI Calculator</a></li>
+            </ul>
+        </header>
         <div class="maindiv">
-            <h1> Simple Interest Calculator </h1>
-            <br />
-            <div class="secdiv">
-                <label for="principal">Amount: </label>
-                <input type="number" name="principal" id="principal" required>
-                <br /><br />
-                <label for="rate">Interest Rate: </label>
-                <input type="range" name="rate" id="rate"  min="1" max="20"  value="10.25" step="0.25"  class="slider" onchange="currentRate()">
-                <!--Display live slider rate-->
-                <span id="display_rate"> 10.25%</span>
-                <br /><br />
-                <label for="years">No. of Years: </label>
-                <select name="years" id="years">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <br /><br />
-                <button onclick="compute()">Compute Interest</button>
-                <div id="result_style">
-                    <!--Display specific results based on the inputs-->
-                    <span id="result"></span> 
-                </div>
-            </div>
-            <br />
-            <footer>
-                &copy; Made by HannesC 
-            </footer>
+            <table class="secdiv">
+                <tr>
+                    <td colspan="3"> <input class="display-box" type="text" id="result" disabled> </td>
+                    <td> <input type="button" value="C" onclick="clrScrn()"> </td>
+                </tr>
+                <tr>
+                    <td> <input type="button" value="1" onclick="display('1')"> </td>
+                    <td> <input type="button" value="2" onclick="display('2')"> </td>
+                    <td> <input type="button" value="3" onclick="display('3')"> </td>
+                    <td> <input type="button" value="/" onclick="display('/')"> </td>
+                </tr>
+                <tr>
+                    <td> <input type="button" value="4" onclick="display('4')"> </td>
+                    <td> <input type="button" value="5" onclick="display('5')"> </td>
+                    <td> <input type="button" value="6" onclick="display('6')"> </td>
+                    <td> <input type="button" value="-" onclick="display('-')"> </td>
+                </tr>
+                <tr>
+                    <td> <input type="button" value="7" onclick="display('7')"> </td>
+                    <td> <input type="button" value="8" onclick="display('8')"> </td>
+                    <td> <input type="button" value="9" onclick="display('9')"> </td>
+                    <td> <input type="button" value="+" onclick="display('+')"> </td>
+                </tr>
+                <tr>
+                    <td> <input type="button" value="." onclick="display('.')"> </td>
+                    <td> <input type="button" value="0" onclick="display('0')"> </td>
+                    <td> <input type="button" value="=" onclick="compute()"> </td>
+                    <td> <input type="button" value="*" onclick="display('*')"> </td>
+                </tr>
+                <tr>
+                    <td colspan="4">&copy; Made by Aditya Chakravorty</td>
+                </tr>
+            </table>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
